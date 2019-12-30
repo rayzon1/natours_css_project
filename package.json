@@ -1,0 +1,15 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Natours project with Sass",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": "https://github.com/rayzon1/natours_css_project.git",
+  "author": "Gerardo Keys",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
