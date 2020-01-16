@@ -2,6 +2,7 @@
 // button component file
 
 .btn {
+    &,
     &:link,
     &:visited {
       text-transform: uppercase;
@@ -13,6 +14,10 @@
       /* Reference for psuedo-element .btn::after absolute positioning */
       position: relative;
       font-size: $default-font-size;
+
+      // Change for <button> element
+      border: none;
+      cursor: pointer;
     }
   
     &:hover {
@@ -25,14 +30,16 @@
       }
     }
   
-    &:active {
+    &:active,
+    &:focus {
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      outline: none;
     }
   
     &--white {
       background-color: $color-white;
-      color: $color-grey-dark;
+      color: $color-grey-dark-1;
   
       &::after {
         background-color: $color-white;
