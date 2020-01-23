@@ -18,6 +18,7 @@
   <body>
 
     <div class="navigation">
+      <!-- Checkbox and label are connected, when label is clicked checkbox is checked -->
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
       <label for="navi-toggle" class="navigation__button">
         <span class="navigation__icon">&nbsp;</span>
@@ -201,7 +202,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -240,7 +241,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -279,7 +280,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$897</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -476,7 +477,25 @@
           </p>
         </div>
       </div>
-    </footer>
+    </footer> 
+
+    <div class="popup" id="popup">
+      <div class="popup__content">  
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img">
+          <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img">
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+          <p class="popup__text">
+            Aenean ornare consequat eros vitae vehicula. Etiam maximus dolor et quam varius, ut ullamcorper ex vehicula. Etiam tempus luctus mattis. Sed diam elit, pretium sit amet congue sit amet, dapibus nec arcu. Duis vulputate volutpat dui eget eleifend. Duis lobortis semper lorem fermentum egestas. Cras aliquam nisl quis est elementum, ac sollicitudin dui auctor. Quisque scelerisque auctor dolor id auctor. Donec dolor ex, bibendum a odio at, sagittis euismod nunc. Aliquam non rhoncus ante, in laoreet augue. Mauris egestas id orci nec condimentum. Praesent viverra volutpat rutrum. Ut mollis massa eu urna consequat aliquet. Duis luctus, turpis non ultricies aliquet, velit eros tempus nulla, ut porttitor elit lectus quis est.
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
 
     <!--
         <section class="grid-test">
