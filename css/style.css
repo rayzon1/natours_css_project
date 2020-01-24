@@ -1,3 +1,16 @@
+/*
+  0 - 600px:    Phone
+  600 - 900px:  Tablet Portrait
+  900 - 1200px: Tablet Landscape
+  [1200 - 1800px]: NORMAL STYLES APPLY
+  1800 + :      Big Desktop
+
+  $breakpoint choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+*/
 /* Basic CSS reset, border-box ignores padding and
  margins when determining size and position.*/
 *,
