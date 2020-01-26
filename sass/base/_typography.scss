@@ -5,7 +5,6 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: $color-grey-dark-1;
-    padding: 3rem;
 }
 
 .heading-primary {
@@ -13,6 +12,8 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+
+    
   
     /* Ease out will move faster at beginning and slower in end, ease-in is the opposite*/
     &--main {
@@ -22,6 +23,11 @@ body {
       letter-spacing: 3.5rem;
       /* animations need a name and duration, others are optional.*/
       animation: moveInLeft 1s ease-out;
+
+      @include respond(phone) {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+      }
     }
   
     &--sub {
@@ -30,9 +36,13 @@ body {
       font-weight: 700;
       letter-spacing: 1.75rem;
       animation: moveInRight 1s ease-out;
+
+      @include respond(phone) {
+        letter-spacing: .5rem;
+      }
     }
   }
-
+ 
 // creates heading with background of gradient green, set text color to transparent to 
 // see the actual green background
 .heading-secondary {
@@ -48,6 +58,14 @@ body {
 
   // time of animations
   transition: all .2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(6deg) scale(1.1);

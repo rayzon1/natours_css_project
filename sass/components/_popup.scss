@@ -24,19 +24,31 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .4s .2s;
+
+        @include respond(tab-land) {
+            width: 100%;
+            display: block;
+        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
 
+        @include respond(tab-land) {
+            width: 34.333333%;
+        }
     }
  
     &__right {
         width: 66.666667%;
         display: table-cell;
         vertical-align: middle;
-        padding: 3rem 5rem;
+        padding: 0 3rem;
+
+        @include respond(tab-land) {
+            width: 46.666667%;
+        }
     }
 
     &__img {
@@ -52,12 +64,17 @@
         column-gap: 4rem; // 1em = 14px
         column-rule: 1px solid $color-grey-light-2;
 
+        // Creates hypens for text automatically
         -moz-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(tab-land) {
+            column-count: 1;
+        }
     }
 
-    // Anchor element target #popup id
+    // Anchor element will target #popup id
     // Open states
     &:target {
         opacity: 1;
@@ -65,6 +82,8 @@
         
     }
 
+    // When target #popup is triggered content box 
+    // animate through center
     &:target &__content {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
