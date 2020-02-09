@@ -31,11 +31,16 @@ html {
 /* body properties will be inherited by all other body
    elements, padding will only go around the body element.*/
 body {
-  box-sizing: border-box;
+  box-sizing: border-box; 
   position: relative;
   padding: 3rem;
 
   @include respond(tab-port) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
